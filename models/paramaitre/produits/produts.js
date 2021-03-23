@@ -21,13 +21,14 @@ const ProduitSchema = new Schema(
         type: Number,
         required: true,
     },
+    etat :{
+      type: String,
+      required: true,
+  },
     familleId : {type: mongoose.Types.ObjectId, ref: "Productfamille"},
     SpecialiteId:  {type: mongoose.Types.ObjectId, ref: "Specialitmedcin"},
     deligationId: {type: mongoose.Types.ObjectId, ref: "Deligation"},
-    etat :{
-        type: String,
-        required: true,
-    }
+   
 
   },
   {

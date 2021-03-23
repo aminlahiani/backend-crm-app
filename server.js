@@ -11,6 +11,8 @@ const DeligationRouter = require("./routes/paramaitre/externe/deligation")
 const SecteurRouter = require("./routes/paramaitre/externe/secteur")
 const ProductFamilleRouter =  require("./routes/paramaitre/produit/productfamille")
 
+const SpecialitmedcinRouter =  require("./routes/paramaitre/medcien/specialitmedcin")
+
 const app = express();
 connectDB()
 const Port = 8000 ;
@@ -46,8 +48,8 @@ app.use(ProductFamilleRouter)
 
 // delegue router
 
-//app.use(delegueRoute)
-
+//medcien
+app.use(SpecialitmedcinRouter)
 
 
 app.use((error, req, res, next) => {

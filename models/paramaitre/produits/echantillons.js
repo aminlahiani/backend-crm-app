@@ -5,9 +5,6 @@ const Schema = mongoose.Schema;
 const EchantillonsSchema = new Schema(
     
   {
-    nom: {
-      type: String,
-    },
     qtyresu :{
       type: String,
     },

@@ -8,12 +8,13 @@ const SpecialiteSchema = new Schema(
         type: String,
         required: true,
       },
+   abonnemenId: {type: mongoose.Types.ObjectId, ref: "Abonnement"}
   },
   { timestamps: true }
   
 );
 
 
-const Specialite = mongoose.model("Specialite", SpecialiteSchema);
+const Specialitmedcin = mongoose.model("Specialitmedcin", SpecialiteSchema);
 
-module.exports = Specialite ;
+module.exports = Specialitmedcin ;

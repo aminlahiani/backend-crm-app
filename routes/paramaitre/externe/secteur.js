@@ -67,39 +67,5 @@ router.get("/api/secteur/:id" , async(req,res) => {
     res.status(200).send(result);
   
   })
-/*
-router.get("/api/gouvernorat" , async(req,res) => {
-    const gouvernorats = await Gouvernorat.find({ abonnemenId : req.user.abonnemenId });
-  //const gouvernorats = await Gouvernorat.find({ userId: req.user._id });
-    res.status(200).send(gouvernorats);
 
-})
-router.get("/api/gouvernorat/:id" , async(req,res) => {
-  const gouvernorat = await Gouvernorat.findById(req.params.id);
-
-  res.status(200).send(gouvernorat);
-
-})
-router.delete("/api/gouvernorat/:id" , async(req,res) => {
-   await Gouvernorat.findByIdAndRemove(req.params.id);
-
-  res.status(200).send(" gouvernorat removed ");
-
-})
-
-router.patch("/api/gouvernorat/:id" , async(req,res) => {
-
-  const governorat = await Gouvernorat.findById(req.params.id);
-
-  const newname = req.body.nom;
-
-    governorat.nom =  newname ;
-
-    governorat.save()
-
- res.status(200).send(governorat);
-
-})
-
-*/
 module.exports = router ;
