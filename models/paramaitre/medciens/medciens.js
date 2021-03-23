@@ -31,21 +31,23 @@ const MedcienSchema = new Schema(
         required: true,
     },
     latitude :{
-        type: String,
+        type: Number,
         required: true,
     },
     longitude : {
-        type: String,
+        type: Number,
         required: true,
     },
-    gouvernorat  : { type: mongoose.Types.ObjectId, ref: "Gouvernorat" },
+
     secretaireId :{ type: mongoose.Types.ObjectId, ref: "Secretaire" },
-    specialite : { type: mongoose.Types.ObjectId, ref: "Specialite" },
-    Deligation
+    specialiteId:  {type: mongoose.Types.ObjectId, ref: "Specialitmedcin"},
+    deligationId: {type: mongoose.Types.ObjectId, ref: "Deligation"},
+    governoratId: { type: mongoose.Types.ObjectId, ref: "Gouvernorat" },
+    abonnemenId: {type: mongoose.Types.ObjectId, ref: "Abonnement"}
   },
   { timestamps: true }
 );
 
-const Medcien = mongoose.model("Specialite", MedcienSchema);
+const Medcien = mongoose.model("Medcien", MedcienSchema);
 
 module.exports = Medcien ;

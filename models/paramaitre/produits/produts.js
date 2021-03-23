@@ -28,6 +28,7 @@ const ProduitSchema = new Schema(
     familleId : {type: mongoose.Types.ObjectId, ref: "Productfamille"},
     SpecialiteId:  {type: mongoose.Types.ObjectId, ref: "Specialitmedcin"},
     deligationId: {type: mongoose.Types.ObjectId, ref: "Deligation"},
+    abonnemenId: {type: mongoose.Types.ObjectId, ref: "Abonnement"},
    
 
   },
@@ -37,6 +38,6 @@ const ProduitSchema = new Schema(
   }
 );
 
-const Pfamille = mongoose.model("Produit", ProduitSchema);
+const Produit = mongoose.model("Produit", ProduitSchema);
 
 module.exports = Produit;
