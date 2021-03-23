@@ -9,14 +9,7 @@ const PharmacieSchema = new Schema(
       type: String,
       required: true,
     },
-    registre_de_commerce : {
-      type: String,
-      required: true,
-    },
-    raison_sosial    : {   
-        type: String,
-        required: true,
-      },
+  
     email: {
       type: String,
       required: true,
@@ -37,6 +30,7 @@ const PharmacieSchema = new Schema(
     secteur : { type: mongoose.Types.ObjectId, ref: "Secteur" },
     pharmacienId : { type: mongoose.Types.ObjectId, ref: "Pharmacien" },
     preparateurprincipalId : [{ type: mongoose.Types.ObjectId, ref: "PreparateurPrincipal" } ],
+    Deligation
   },
   { timestamps: true }
 );

@@ -41,7 +41,7 @@ const MedcienSchema = new Schema(
     gouvernorat  : { type: mongoose.Types.ObjectId, ref: "Gouvernorat" },
     secretaireId :{ type: mongoose.Types.ObjectId, ref: "Secretaire" },
     specialite : { type: mongoose.Types.ObjectId, ref: "Specialite" },
-    secteur : { type: mongoose.Types.ObjectId, ref: "Secteur" },
+    Deligation
   },
   { timestamps: true }
 );

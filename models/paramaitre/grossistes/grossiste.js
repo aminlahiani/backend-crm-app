@@ -5,18 +5,12 @@ const Schema = mongoose.Schema;
 
 const GrossisteSchema = new Schema(
   {
-    registre_de_commerce : {
+    nom : {
       type: String,
       required: true,
     },
-    raison_sosial    : {   
-        type: String,
-        required: true,
-      },
-    email: {
-      type: String,
-      required: true,
-    },
+ 
+
     adresse : {
       type: String,
       required: true,
@@ -34,6 +28,7 @@ const GrossisteSchema = new Schema(
     responsble_paymentId :{ type: mongoose.Types.ObjectId, ref: "ResponsblePayment" },
     gouvernorat  : { type: mongoose.Types.ObjectId, ref: "Gouvernorat" },
     secteur : { type: mongoose.Types.ObjectId, ref: "Secteur" },
+    Deligation
   },
   { timestamps: true }
 );

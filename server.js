@@ -6,7 +6,8 @@ const session = require('express-session')
 const cors = require('cors')
 const authRouter = require("./routes/auth")
 const AbonnementRouter = require("./routes/abonnement")
-
+const GouvernoratRouter = require("./routes/paramaitre/externe/gouvernorat")
+const DeligationRouter = require("./routes/paramaitre/externe/deligation")
 const app = express();
 connectDB()
 const Port = 8000 ;
@@ -30,8 +31,10 @@ app.use(authRouter)
 //app.use(taskRouter)
 // abonnement Router
 app.use(AbonnementRouter)
+
+app.use(GouvernoratRouter)
 // admin Router
-//app.use(adminRouter)
+app.use(DeligationRouter)
 // gerant Router
 //app.use(gerantRouter)
 // supirviseur Router

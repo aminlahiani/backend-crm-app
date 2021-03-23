@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 
-const PfamilleSchema = new Schema(
+const ProductfamilleSchema = new Schema(
   {
     nom: {
       type: String,
@@ -19,6 +19,6 @@ const PfamilleSchema = new Schema(
   }
 );
 
-const Pfamille = mongoose.model("Pfamille", PfamilleSchema);
+const Productfamille = mongoose.model("Productfamille", ProductfamilleSchema);
 
-module.exports = Pfamille;
+module.exports = Productfamille;

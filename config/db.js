@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const MONGO_URI =  'mongodb://127.0.0.1:27017/project'
+const MONGO_URI =  'mongodb+srv://amin:SSsHi8vJnZTVXFq@cluster0.xqhsk.mongodb.net/crm'
 
 const connectDB = async () => {
   try {

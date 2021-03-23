@@ -1,12 +1,21 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const GouvernoratSchema = new Schema(
+
+
+const EchantillonsSchema = new Schema(
+    
   {
     nom: {
       type: String,
     },
-    abonnemenId: {type: mongoose.Types.ObjectId, ref: "Abonnement"}
+    qtyresu :{
+      type: String,
     },
+    produit : {
+
+    },
+
+  },
   {
     timestamps: true,
     // toJSON: {
@@ -17,6 +26,6 @@ const GouvernoratSchema = new Schema(
   }
 );
 
-const Gouvernorat = mongoose.model("Gouvernorat", GouvernoratSchema);
+const Echantillons = mongoose.model("Echantillons", EchantillonsSchema);
 
-module.exports = Gouvernorat;
+module.exports = Echantillons;
