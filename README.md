@@ -10,4 +10,7 @@ abonnement
 
 Governorat 
 Delugation
+Secteur
+
+ProductFamille
 

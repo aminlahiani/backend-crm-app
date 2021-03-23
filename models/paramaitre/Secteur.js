@@ -6,9 +6,9 @@ const SecteurSchema = new Schema(
     nom: {
       type: String,
     },
-
-    famille: { type: mongoose.Types.ObjectId, ref: "Pfamille" },
-    Governorat: { type: mongoose.Types.ObjectId, ref: "Governorat" },
+    productfamilleId: { type: mongoose.Types.ObjectId, ref: "Productfamille" },
+    governoratId: { type: mongoose.Types.ObjectId, ref: "Gouvernorat" },
+    abonnemenId: {type: mongoose.Types.ObjectId, ref: "Abonnement"}
   },
   {
     timestamps: true,

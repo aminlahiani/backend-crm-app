@@ -8,6 +8,9 @@ const authRouter = require("./routes/auth")
 const AbonnementRouter = require("./routes/abonnement")
 const GouvernoratRouter = require("./routes/paramaitre/externe/gouvernorat")
 const DeligationRouter = require("./routes/paramaitre/externe/deligation")
+const SecteurRouter = require("./routes/paramaitre/externe/secteur")
+const ProductFamilleRouter =  require("./routes/paramaitre/produit/productfamille")
+
 const app = express();
 connectDB()
 const Port = 8000 ;
@@ -33,10 +36,11 @@ app.use(authRouter)
 app.use(AbonnementRouter)
 
 app.use(GouvernoratRouter)
-// admin Router
 app.use(DeligationRouter)
+app.use(SecteurRouter)
 // gerant Router
-//app.use(gerantRouter)
+
+app.use(ProductFamilleRouter)
 // supirviseur Router
 //app.use(superviseurRouter)
 

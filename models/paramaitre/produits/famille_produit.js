@@ -7,7 +7,7 @@ const ProductfamilleSchema = new Schema(
     nom: {
       type: String,
     },
-
+    abonnemenId: {type: mongoose.Types.ObjectId, ref: "Abonnement"},
   },
   {
     timestamps: true,

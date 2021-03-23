@@ -4,24 +4,26 @@ const Schema = mongoose.Schema;
 
 const ProduitSchema = new Schema(
   {
-    code : {
+    nom : {
       type: String,
       required: true,
     },
-    designation :{
-        type: String,
-        required: true,
+    code : {
+      type: Number,
+      required: true,
     },
+   
     prixgrossiste  :{
-        type: String,
+        type: Number,
         required: true,
     },
     prixpharmacie :{
-        type: String,
+        type: Number,
         required: true,
     },
-    famille : {type: mongoose.Types.ObjectId, ref: "Pfamille"},
-    Specialite:  {type: mongoose.Types.ObjectId, ref: "Specialitmedcin"},
+    familleId : {type: mongoose.Types.ObjectId, ref: "Productfamille"},
+    SpecialiteId:  {type: mongoose.Types.ObjectId, ref: "Specialitmedcin"},
+    deligationId: {type: mongoose.Types.ObjectId, ref: "Deligation"},
     etat :{
         type: String,
         required: true,
