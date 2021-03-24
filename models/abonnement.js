@@ -4,13 +4,7 @@ const Schema = mongoose.Schema;
 
 const abonnementSchema = new Schema(
   {
-    Registredecommerce: {
-      type: String,
-    },
     raisonsosial: {
-      type: String,
-    },
-    logo: {
       type: String,
     },
     telephone: {
@@ -20,13 +14,12 @@ const abonnementSchema = new Schema(
       type: String,
     },
     datedebut: {
-      type: String,
+      type: Date,
+      required : true
     },
     datafin: {
-      type: String,
-    },
-    etat: {
-      type: String,
+      type: Date,
+      required : true
     },
     gerant: {type: mongoose.Types.ObjectId, ref: "User"}
   },

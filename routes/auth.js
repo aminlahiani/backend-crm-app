@@ -1,6 +1,6 @@
 const express = require("express");
 
-const auth = require("../middleware/auth");
+
 
 const User = require("../models/user");
 
@@ -19,6 +19,16 @@ router.post("/create/admin", async (req, res) => {
     res.status(400).send(error);
   }
 });
+
+router.post('/api/admin/login', async (req, res) => {
+  try {
+      const user = await User.findByCredentials(req.body.email, req.body.password)
+      const token = await user.generateAuthToken()
+      res.send({ token , user })
+  } catch (e) {
+      res.status(400).send(e)
+  }
+})
 
 router.post("/create/gerant", async (req, res) => {
   const user = new User({
@@ -69,13 +79,13 @@ router.post('/api/user/login', async (req, res) => {
   try {
       const user = await User.findByCredentials(req.body.email, req.body.password)
       const token = await user.generateAuthToken()
-      res.send({ token })
+      res.status(200).send({ token })
   } catch (e) {
       res.status(400).send()
   }
 })
 
-router.get("/api/users", auth, async (req, res) => {
+router.get("/api/users", async (req, res) => {
   res.send(req.user);
 });
 

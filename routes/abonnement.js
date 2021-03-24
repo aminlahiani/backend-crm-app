@@ -6,9 +6,10 @@ const express = require("express")
 const router = express.Router();
 
 router.post("/api/abonnement/createe" , async (req, res, next) => {
-    const { gerantEmail, gerantPassword, gerantName } = req.body
+    const { gerantEmail, gerantPassword, gerantNom , gerantPrenom } = req.body
     const newGerant = new User({
-        name: gerantName,
+        nom: gerantNom,
+        pernom : gerantPrenom ,
         email: gerantEmail,
         password: gerantPassword,
         role: "Gerant",

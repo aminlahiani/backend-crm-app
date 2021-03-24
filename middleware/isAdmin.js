@@ -1,6 +1,6 @@
 const isAdmin = (req, res, next) => {
   
-    authhandler = req.user && req.user.role === "ADMIN";
+   const  authhandler = req.user && req.user.role === "ADMIN";
   
     if (authhandler) {
      next()
